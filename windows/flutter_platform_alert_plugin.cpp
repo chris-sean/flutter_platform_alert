@@ -266,7 +266,7 @@ FlutterPlatformAlertPlugin::ShowWithTaskDialogIndirect(
     config.cbSize = sizeof(config);
     config.pszMainInstruction = windowTitle.c_str();
     config.pszContent = text.c_str();
-    config.dwFlags = TDF_POSITION_RELATIVE_TO_WINDOW;
+    config.dwFlags = TDF_POSITION_RELATIVE_TO_WINDOW|TDF_SIZE_TO_CONTENT;
 
     if (!additionalWindowTitle.empty()) {
         config.pszWindowTitle = additionalWindowTitle.c_str();
